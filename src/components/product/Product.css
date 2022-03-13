@@ -1,0 +1,18 @@
+.container-products {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.product-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.select-option {
+  width: 10vw;
+  padding: 4px;
+}
