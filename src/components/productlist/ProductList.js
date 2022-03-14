@@ -29,38 +29,41 @@ function ProductList() {
     <div className="productlists-container">
       <>
         <table style={{ width: "40vw" }}>
-          <tr style={{ textAlign: "center" }}>
-            <th>Product</th>
-            <th>Available</th>
-            <th></th>
-          </tr>
-
-          {product?.map((item, index) => (
-            <tr style={{ textAlign: "center" }} key={index}>
-              <td className="product-table">{item.productName}</td>
-              <td>{item.productAvailable}</td>
-              <td>
+          <thead>
+            <tr style={{ textAlign: "center" }}>
+              <th>Product</th>
+              <th>Available</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {product?.map((item, index) => (
+              <tr style={{ textAlign: "center" }} key={index}>
+                <td className="product-table">{item.productName}</td>
+                <td>{item.productAvailable}</td>
+                <td>
+                  <button
+                    className="btn btn-sm btn-danger m-2"
+                    onClick={() => deleteBtn(index)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+            <tr>
+              <td></td>
+              <td></td>
+              <td style={{ textAlign: "center" }}>
                 <button
                   className="btn btn-sm btn-danger m-2"
-                  onClick={() => deleteBtn(index)}
+                  onClick={emptyProductBtn}
                 >
-                  Delete
+                  Empty list
                 </button>
               </td>
             </tr>
-          ))}
-          <tr>
-            <td></td>
-            <td></td>
-            <td style={{ textAlign: "center" }}>
-              <button
-                className="btn btn-sm btn-danger m-2"
-                onClick={emptyProductBtn}
-              >
-                Empty list
-              </button>
-            </td>
-          </tr>
+          </tbody>
         </table>
       </>
     </div>

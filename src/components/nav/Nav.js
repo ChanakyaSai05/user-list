@@ -9,6 +9,7 @@ function Nav() {
         <NavItem title="USER LIST" link="/userlist" />
         <NavItem title="PRODUCT" link="/product" />
         <NavItem title="PRODUCT LIST" link="/productlist" />
+        <NavItem title="NESTED" link="/nestedlist" />
       </div>
     </div>
   );

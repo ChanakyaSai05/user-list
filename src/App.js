@@ -5,6 +5,7 @@ import AddUser from "./components/adduser/AddUser";
 import UserList from "./components/userlist/UserList";
 import Product from "./components/product/Product";
 import ProductList from "./components/productlist/ProductList";
+import NestedFile from "./components/nestedfile/NestedFile";
 function App() {
   return (
     <div className="app">
@@ -16,6 +17,7 @@ function App() {
             <Route path="userlist" element={<UserList />} />
             <Route path="product" element={<Product />} />
             <Route path="productlist" element={<ProductList />} />
+            <Route path="nestedlist/*" element={<NestedFile />} />
           </Routes>
         </div>
       </BrowserRouter>
