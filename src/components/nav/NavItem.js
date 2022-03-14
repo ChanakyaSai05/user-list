@@ -9,6 +9,7 @@ function NavItem({ title, link }) {
   return (
     <div onClick={redirect} className="navItem">
       <p className="navItem-title">{title}</p>
+      <p>Hii ra </p>
     </div>
   );
 }
